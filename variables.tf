@@ -1,4 +1,4 @@
-provider "spacelift" {}
+
 
 variable "new_stack_name" {
   type = string
