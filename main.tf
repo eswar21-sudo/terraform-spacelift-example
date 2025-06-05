@@ -8,6 +8,7 @@ terraform {
 
 resource "spacelift_stack" "example-stack" {
   name = var.new_stack_name
+  space_id = "root"
 
   administrative    = true
   autodeploy        = false
