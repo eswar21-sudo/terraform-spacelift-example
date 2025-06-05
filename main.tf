@@ -5,12 +5,17 @@ terraform {
     }
   }
 }
+provider "spacelift" {
+  api_key    = var.spacelift_api_key
+  api_secret = var.spacelift_api_secret
+}
+
 
 resource "spacelift_stack" "example-stack" {
   name = var.new_stack_name
-  space_id = "root"
+  space_id          = "01HXYZABC123ABC456"
 
-  administrative    = true
+  #administrative    = true
   autodeploy        = false
   branch            = "master"
   description       = "Shared production infrastructure (networking, k8s)"
